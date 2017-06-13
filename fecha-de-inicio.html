@@ -216,9 +216,8 @@
 
         <div class="control-group form-group">
           <div class="controls form-control-inline">
-    <input value="first"  style="width:47%; margin-right:10px;" type="date"/>
-    <input value="last" style="width:47%" type="date"/>
-
+          <input value="first"  style="width:47%;" type="date"/>
+          <input value="last" style="width:47%; float: right;" type="date"/>
             <p class="help-block"></p>
           </div>
         </div>
@@ -270,6 +269,12 @@
       interval: 5000 //changes the speed
     })
   </script>
+  <script>
+    $(".picker").on("change", function() {
+    var date = $(this).val();
+    $(".date").val(date);
+})
+</script>
 </body>
 
 </html>
