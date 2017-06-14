@@ -12,6 +12,8 @@
 
   <!-- Bootstrap Core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/datepicker.css" rel="stylesheet">
+
 
   <!-- Custom CSS -->
   <link href="css/modern-business.css" rel="stylesheet">
@@ -216,11 +218,13 @@
 
         <div class="control-group form-group">
           <div class="controls form-control-inline">
-          <input value="first"  style="width:47%;" type="date"/>
-          <input value="last" style="width:47%; float: right;" type="date"/>
+          <input value="Fecha de inicio"  style="width:47%;" type="text"/ id="datepicker" class="datetimepicker">
+          <input value="Fecha de término" style="width:47%; float: right;" type="text"/ id="datepicker2">
             <p class="help-block"></p>
           </div>
         </div>
+
+        
 
 
 
@@ -258,7 +262,8 @@
 
   <!-- jQuery -->
   <script src="js/jquery.js"></script>
-  <script src="js/progressbar.js"></script>
+  <script type="text/javascript" src="js/bootstrap-datepicker.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="js/bootstrap-datepicker.es.js" charset="UTF-8"></script>
 
   <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap.min.js"></script>
@@ -271,10 +276,16 @@
   </script>
   <script>
     $(".picker").on("change", function() {
-    var date = $(this).val();
-    $(".date").val(date);
-})
+      var date = $(this).val();
+      $(".date").val(date); 
+    })
+    $( document ).ready(function() {
+      $('#datepicker').datepicker();
+      $('#datepicker2').datepicker();
+    });
 </script>
+
+
 </body>
 
 </html>
